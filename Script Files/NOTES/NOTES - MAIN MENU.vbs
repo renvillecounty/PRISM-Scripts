@@ -47,7 +47,7 @@ BeginDialog NOTES_main_menu_dialog, 0, 0, 431, 260, "NOTES main menu dialog"
     PushButton 10, 95, 70, 10, "No Pay Months 1-4", NOTES_no_pay_months_button
     PushButton 10, 110, 50, 10, "Pay or report", NOTES_pay_or_report_button
     PushButton 10, 125, 65, 10, "Quarterly reviews", NOTES_quarterly_reviews_button
-    PushButton 10, 140, 50, 10, "ROP Invoice", NOTES_ROP_invoice_button
+    PushButton 10, 140, 50, 10, "ROP Detail", NOTES_ROP_invoice_button
     PushButton 10, 165, 50, 10, "SOP Invoice", NOTES_SOP_invoice_button
     PushButton 10, 190, 105, 10, "Waiver of Personal Service", NOTES_waiver_of_personal_service_button
     CancelButton 375, 240, 50, 15
