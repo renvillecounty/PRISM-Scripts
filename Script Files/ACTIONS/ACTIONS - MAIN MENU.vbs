@@ -60,6 +60,6 @@ IF ButtonPressed = ACTIONS_find_name_on_cali_button THEN CALL run_from_GitHub(sc
 IF ButtonPressed = ACTIONS_prorate_support_button THEN call run_from_GitHub(script_repository & "ACTIONS/ACTIONS - PRORATE SUPPORT.vbs")
 IF ButtonPressed = ACTIONS_intake_button then call run_from_GitHub(script_repository & "ACTIONS/ACTIONS - INTAKE.vbs")
 IF ButtonPressed = ACTIONS_PALC_calculator_button then call run_from_GitHub(script_repository & "ACTIONS/ACTIONS - PALC CALCULATOR.vbs")
-IF ButtonPressed = ACTIONS_redirection_docs THEN CALL run_from_GitHub(script_repository & "ACTIONS/ACTIONS - REDIRECTIONS DOCS.vbs")
+IF ButtonPressed = ACTIONS_redirection_docs THEN CALL run_from_GitHub(script_repository & "ACTIONS/ACTIONS - REDIRECTION DOCS.vbs")
 IF ButtonPressed = ACTIONS_un_un_button THEN CALL run_from_GitHub(script_repository & "ACTIONS/ACTIONS - UNREIMBURSED UNINSURED DOCS.vbs")
 
