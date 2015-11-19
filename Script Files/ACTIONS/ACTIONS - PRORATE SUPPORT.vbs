@@ -1,4 +1,7 @@
-Option Explicit
+'STATS GATHERING----------------------------------------------------------------------------------------------------
+name_of_script = "ACTIONS - PRORATE SUPPORT.vbs"
+start_time = timer
+'MANUAL TIME TO COMPLETE THIS SCRIPT IS NEEDED
 
 'VARIABLES TO DECLARE----------------------------------------------------------------------------------------------------
 Dim prorate_dialog, number_days, obligation_amt, month_to_prorate, days_in_month, leap_year, prorate_amt, ButtonPressed	
@@ -58,3 +61,4 @@ Loop Until days_in_month > CDbl(number_days) and isnumeric(number_days) = true a
 prorate_amt = (obligation_amt/days_in_month) * number_days  'prorated amount is obligation amount, divided by the number of days in the month, multiplied by the number of days to prorate
 Msgbox "The prorated obligation for " & number_days & " days in " & month_to_prorate & " is " & formatCurrency(prorate_amt) & "." 'display result in a message box.
 
+script_end_procedure("")
