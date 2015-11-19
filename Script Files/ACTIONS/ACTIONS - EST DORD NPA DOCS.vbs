@@ -1,4 +1,6 @@
-Enter file contents hereOption Explicit
+'Stats gathering
+name_of_script = "ACTIONS - EST DORD NPA DOCS.vbs"
+start_time = timer
 
 DIM beta_agency
 
@@ -307,5 +309,5 @@ Transmit
 
 pf3
 
-StopScript
+script_end_procedure("")
 
