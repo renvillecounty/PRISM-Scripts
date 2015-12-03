@@ -199,7 +199,7 @@ EMConnect "" 'Connect to PRISM
 
 dialog CALI_search_dialog 'Display the dialog 
 
-CALL check_for_PRISM (TRUE) 'Check to see if PRISM is locked
+CALL check_for_PRISM (false) 'Check to see if PRISM is locked
 
 	IF buttonpressed = 0 THEN stopscript  'If cancel is pressed, end script
 
