@@ -1,6 +1,6 @@
 'GATHERING STATS----------------------------------------------------------------------------------------------------
-name_of_script = "ACTIONS - MAIN MENU.vbs"
-start_time = timer
+'name_of_script = "ACTIONS - MAIN MENU.vbs"
+'start_time = timer
 
 'LOADING ROUTINE FUNCTIONS FROM GITHUB REPOSITORY---------------------------------------------------------------------------
 url = "https://raw.githubusercontent.com/MN-CS-Script-Team/PRISM-Scripts/master/Shared%20Functions%20Library/PRISM%20Functions%20Library.vbs"
