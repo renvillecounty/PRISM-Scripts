@@ -148,12 +148,12 @@ EMWriteScreen cms_amount, 16, 15
 Transmit
 EMWriteScreen ccc_amount, 16, 15
 Transmit
-EMSendKey (PF8)
+PF8
 EMWriteScreen "S", 7, 5
 Transmit
 EMWriteScreen total_amount, 16, 15
 Transmit
-EMSendKey (PF3)
+PF3
 EMWriteScreen "M", 3, 29
 Transmit								'At this point, the notice to the NCP is ready to be printed
 '________________________________________________________________________________________________________________________________________________________________________________________ CP NOTICE
@@ -166,7 +166,7 @@ EMWriteScreen "F0501", 6, 36
 Transmit
 
 'entering user labels
-EMSendKey (PF14)
+PF14
 EMWriteScreen "U", 20, 14
 Transmit
 EMWriteScreen "S", 7, 5
@@ -215,19 +215,19 @@ EMWriteScreen cms_amount, 16, 15
 Transmit
 EMWriteScreen ccc_amount, 16, 15
 Transmit
-EMSendKey (PF8)
+PF8
 EMWriteScreen "S", 7, 5
 Transmit
 EMWriteScreen total_amount, 16, 15
 Transmit
-EMSendKey (PF3)
+PF3
 EMWriteScreen "M", 3, 29
 Transmit								'At this point, the notice to the CP is ready to be printed
 
 'Enters worklist explaining to start redirection effective for the following month. 
 EMWriteScreen "CAWT", 21,18
 Transmit
-EMSendKey (PF5)
+PF5
 EMWriteScreen "A", 3, 30
 EMWriteScreen "FREE", 4, 37
 EMWriteScreen "The redirection should be effective the 1st of next month", 10, 4 
@@ -256,7 +256,7 @@ EMWriteScreen "F0502", 6, 36
 Transmit
 
 'entering user labels
-EMSendKey (PF14)
+PF14
 EMWriteScreen "U", 20, 14
 Transmit
 EMWriteScreen "S", 7, 5
@@ -298,14 +298,14 @@ EMWriteScreen ccc_amount, 16, 15
 Transmit
 EMWriteScreen total_amount, 16, 15
 Transmit
-EMSendKey (PF3)
+PF3
 EMWriteScreen "M", 3, 29
 Transmit								'At this point, the notice to the caregiver is ready to be printed
 
 'Enters worklist explaining to start redirection effective for the following month. 
 EMWriteScreen "CAWT", 21,18
 Transmit
-EMSendKey (PF5)
+PF5
 EMWriteScreen "A", 3, 30
 EMWriteScreen "FREE", 4, 37
 EMWriteScreen "The redirection should be effective the 1st of next month", 10, 4 
@@ -313,5 +313,8 @@ EMWriteScreen "30", 17, 52
 Transmit 
 
 script_end_procedure("DORD docs are created but incomplete.  Please modify to select appropriate legal headings.")
+
+
+
 
 
