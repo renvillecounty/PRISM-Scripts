@@ -36,7 +36,7 @@ BeginDialog ACTIONS_main_menu_dialog, 0, 0, 381, 180, "ACTIONS Main Menu"
     PushButton 5, 50, 30, 10, "Intake", ACTIONS_intake_button
     PushButton 5, 75, 60, 10, "PALC calculator", ACTIONS_PALC_calculator_button
     PushButton 5, 95, 60, 10, "Prorate Support", ACTIONS_prorate_support_button
-    PushButton 5, 115, 65, 10, "Redirection Docs", ACTIONS_redirection_docs_button
+    PushButton 5, 115, 65, 10, "Redirection Docs", ACTIONS_redirect_docs_button
     PushButton 5, 135, 75, 10, "Unreimb/Unins Docs", ACTIONS_un_un_button
     CancelButton 325, 160, 50, 15
   Text 100, 10, 270, 10, "-- NEW 11/2015!!! Sends Affidavits of Serivce to multiple participants on the case."
@@ -60,5 +60,5 @@ IF ButtonPressed = ACTIONS_find_name_on_cali_button THEN CALL run_from_GitHub(sc
 IF ButtonPressed = ACTIONS_prorate_support_button THEN call run_from_GitHub(script_repository & "ACTIONS/ACTIONS - PRORATE SUPPORT.vbs")
 IF ButtonPressed = ACTIONS_intake_button then call run_from_GitHub(script_repository & "ACTIONS/ACTIONS - INTAKE.vbs")
 IF ButtonPressed = ACTIONS_PALC_calculator_button then call run_from_GitHub(script_repository & "ACTIONS/ACTIONS - PALC CALCULATOR.vbs")
-IF ButtonPressed = ACTIONS_redirection_docs_button THEN CALL run_from_GitHub(script_repository & "ACTIONS/ACTIONS - REDIRECT DOCS.vbs")
+IF ButtonPressed = ACTIONS_redirect_docs_button THEN CALL run_from_GitHub(script_repository & "ACTIONS/ACTIONS - REDIRECT DOCS.vbs")
 IF ButtonPressed = ACTIONS_un_un_button THEN CALL run_from_GitHub(script_repository & "ACTIONS/ACTIONS - UNREIMBURSED UNINSURED DOCS.vbs")
