@@ -1,6 +1,6 @@
-+'STATS GATHERING----------------------------------------------------------------------------------------------------
-+name_of_script = "ACTIONS - FEE SUSPENSION OVERRIDE.vbs"
-+start_time = timer
+'STATS GATHERING----------------------------------------------------------------------------------------------------
+name_of_script = "ACTIONS - FEE SUSPENSION OVERRIDE.vbs"
+start_time = timer
 
 'LOADING ROUTINE FUNCTIONS (FOR PRISM)-------------------------------------------------------------------------------------------------------------------
 Dim URL, REQ, FSO					'Declares variables to be good to option explicit users
