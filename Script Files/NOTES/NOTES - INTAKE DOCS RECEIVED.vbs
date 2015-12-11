@@ -1,4 +1,7 @@
-option explicit
+'option explicit
+'GATHERING STATS============================================
+name_of_script = "NOTES - INTAKE DOCS RECEIVED.vbs"
+start_time = timer
 
 'LOADING PRISM CUSTOM FUNCTIONS--------------------------------------------------------------------------------------------------
 
@@ -149,4 +152,3 @@ transmit
 PF3
 
 script_end_procedure("")          'Stops the script
-Enter file contents here
