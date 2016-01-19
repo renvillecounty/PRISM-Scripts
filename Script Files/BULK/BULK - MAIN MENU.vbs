@@ -31,26 +31,32 @@ END IF
 'DIALOGS---------------------------------------------------------------------------
 BeginDialog BULK_main_menu_dialog, 0, 0, 381, 210, "BULK Main Menu"
   ButtonGroup ButtonPressed
-    PushButton 10, 15, 60, 10, "CALI to Excel", BULK_cali_to_excel_button
-    PushButton 10, 40, 60, 10, "Case Transfer", BULK_case_transfer_button
-    PushButton 10, 65, 100, 10, "Companion Case Finder - CP", BULK_cp_companion_case_finder_button
-    PushButton 10, 85, 105, 10, "Companion Case Finder - NCP", BULK_ncp_companion_case_finder_button
-    PushButton 10, 105, 60, 10, "Evaluate NOCS", BULK_evaluate_nocs_button
-    PushButton 10, 125, 90, 10, "Failure POF -- SSA, DFAS", BULK_failure_pof_rsdi_dfas_button
+    PushButton 5, 25, 60, 10, "CALI to Excel", BULK_cali_to_excel_button
+    PushButton 5, 50, 60, 10, "Case Transfer", BULK_case_transfer_button
+    PushButton 5, 75, 100, 10, "Companion Case Finder - CP", BULK_cp_companion_case_finder_button
+    PushButton 5, 95, 105, 10, "Companion Case Finder - NCP", BULK_ncp_companion_case_finder_button
+    PushButton 5, 115, 60, 10, "Evaluate NOCS", BULK_evaluate_nocs_button
+    PushButton 5, 135, 90, 10, "Failure POF -- SSA, DFAS", BULK_failure_pof_rsdi_dfas_button
     CancelButton 325, 190, 50, 15
-  Text 80, 15, 295, 20, "-- This script builds a list in Microsoft Excel of case numbers, function types, program codes, interstate codes, and parent names."
-  Text 80, 40, 295, 20, "-- This script allows users to transfer up to 15 cases to as many workers as they need OR to transfer an entire caseload to as many workers as needed."
-  Text 115, 65, 260, 10, "--- This script builds a list of companion cases for your CPs on a given CALI."
-  Text 120, 85, 255, 10, "-- This script builds a list of companion cases for your NCPs on a given CALI."
-  Text 80, 105, 260, 10, "-- This script evaluates D0800 worklist items for continued services."
-  Text 105, 125, 270, 20, "-- NEW 11/2015!!! Clears E0014 worklist item when income is from RSDI (US Treasury) or Dept of Defense."
+    PushButton 300, 5, 75, 10, "PRISM Scripts in SIR", SIR_button
+  Text 75, 25, 295, 20, "-- This script builds a list in Microsoft Excel of case numbers, function types, program codes, interstate codes, and parent names."
+  Text 75, 50, 295, 20, "-- This script allows users to transfer up to 15 cases to as many workers as they need OR to transfer an entire caseload to as many workers as needed."
+  Text 110, 75, 260, 10, "--- This script builds a list of companion cases for your CPs on a given CALI."
+  Text 115, 95, 255, 10, "-- This script builds a list of companion cases for your NCPs on a given CALI."
+  Text 75, 115, 260, 10, "-- This script evaluates D0800 worklist items for continued services."
+  Text 100, 135, 270, 20, "-- Clears E0014 worklist item when income is from RSDI (US Treasury) or Dept of Defense."
 EndDialog
 
 
 'THE SCRIPT-----------------------------------------------------------------------------------------------
-'Shows the dialog
-Dialog BULK_main_menu_dialog
-If buttonpressed = cancel then StopScript
+
+DO
+	'Shows the dialog
+	Dialog BULK_main_menu_dialog
+	If buttonpressed = cancel then StopScript
+	IF ButtonPressed = SIR_button THEN CreateObject("WScript.Shell").Run("https://www.dhssir.cty.dhs.state.mn.us/MAXIS/blzn/PRISMscripts/PRISM%20script%20wiki/Forms/AllPages.aspx")
+LOOP UNTIL ButtonPressed <> SIR_button
+
 IF ButtonPressed = BULK_cali_to_excel_button 					THEN CALL run_from_GitHub(script_repository & "BULK/BULK - CALI TO EXCEL.vbs")
 IF ButtonPressed = BULK_case_transfer_button 					THEN CALL run_from_GitHub(script_repository & "BULK/BULK - CASE TRANSFER.vbs")
 IF ButtonPressed = BULK_cp_companion_case_finder_button 			THEN CALL run_from_GitHub(script_repository & "BULK/BULK - CP COMPANION CASE FINDER.vbs")
