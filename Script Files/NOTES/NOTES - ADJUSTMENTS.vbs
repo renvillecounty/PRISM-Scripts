@@ -147,4 +147,4 @@ call write_editbox_in_PRISM_case_note("Description", Descrip_Box, 4)
 call write_new_line_in_PRISM_case_note("---")
 call write_new_line_in_PRISM_case_note(Worker_Signature)
 
-script_end_procedure()
+script_end_procedure("")
