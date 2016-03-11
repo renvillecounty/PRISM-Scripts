@@ -63,7 +63,7 @@ DO
 LOOP UNTIL ButtonPressed <> SIR_button
 
 IF ButtonPressed = ACTIONS_affidavit_of_service_button THEN CALL run_from_GitHub(script_repository & "ACTIONS/ACTIONS - AFFIDAVIT OF SERVICE BY MAIL DOCS.vbs")
-IF ButtonPressed = ACTIONS_ddpl_calc_button THEN CALL run_from_GitHub(script_repository & "ACTIONS/ACTIONS DDPL CALCULATOR.vbs")
+IF ButtonPressed = ACTIONS_ddpl_calc_button THEN CALL run_from_GitHub(script_repository & "ACTIONS/ACTIONS - DDPL CALCULATOR.vbs")
 IF ButtonPressed = ACTIONS_find_name_on_cali_button THEN CALL run_from_GitHub(script_repository & "ACTIONS/ACTIONS - FIND NAME ON CALI.vbs")
 IF ButtonPressed = ACTIONS_prorate_support_button THEN call run_from_GitHub(script_repository & "ACTIONS/ACTIONS - PRORATE SUPPORT.vbs")
 IF ButtonPressed = ACTIONS_intake_button then call run_from_GitHub(script_repository & "ACTIONS/ACTIONS - INTAKE.vbs")
