@@ -29,25 +29,28 @@ ELSE														'Error message, tells user to try to reach github.com, otherwi
 END IF
 
 'DIALOGS---------------------------------------------------------------------------
-BeginDialog ACTIONS_main_menu_dialog, 0, 0, 381, 205, "ACTIONS Main Menu"
+BeginDialog ACTIONS_main_menu_dialog, 0, 0, 381, 210, "ACTIONS Main Menu"
   ButtonGroup ButtonPressed
     PushButton 5, 30, 85, 10, "Affidavit of Service Docs", ACTIONS_affidavit_of_service_button
-    PushButton 5, 50, 70, 10, "Find Name on CALI", ACTIONS_find_name_on_cali_button
-    PushButton 5, 70, 30, 10, "Intake", ACTIONS_intake_button
-    PushButton 5, 95, 60, 10, "PALC calculator", ACTIONS_PALC_calculator_button
-    PushButton 5, 115, 60, 10, "Prorate Support", ACTIONS_prorate_support_button
-    PushButton 5, 135, 65, 10, "Redirection Docs", ACTIONS_redirect_docs_button
-    PushButton 5, 155, 75, 10, "Unreimb/Unins Docs", ACTIONS_un_un_button
-    CancelButton 325, 180, 50, 15
+    PushButton 5, 45, 70, 10, "DDPL Calculator", ACTIONS_ddpl_calc_button
+    PushButton 5, 60, 70, 10, "Find Name on CALI", ACTIONS_find_name_on_cali_button
+    PushButton 5, 80, 30, 10, "Intake", ACTIONS_intake_button
+    PushButton 5, 105, 60, 10, "PALC calculator", ACTIONS_PALC_calculator_button
+    PushButton 5, 125, 60, 10, "Prorate Support", ACTIONS_prorate_support_button
+    PushButton 5, 145, 65, 10, "Redirection Docs", ACTIONS_redirect_docs_button
+    PushButton 5, 165, 75, 10, "Unreimb/Unins Docs", ACTIONS_un_un_button
+    CancelButton 325, 190, 50, 15
     PushButton 300, 5, 75, 10, "PRISM Scripts in SIR", SIR_button
   Text 100, 30, 270, 10, "-- Sends Affidavits of Serivce to multiple participants on the case."
-  Text 80, 50, 215, 10, "-- Searches CALI for a specific CP or NCP."
-  Text 40, 70, 335, 15, "-- Creates various documents related to Child Support intake, as well as DORD documents, and enters a note on CAAD."
-  Text 70, 95, 230, 10, "-- Calculates voluntary and involuntary amounts from the PALC screen."
-  Text 70, 115, 225, 10, "- Calculator for deteremining pro-rated support for partial months."
-  Text 75, 135, 290, 10, "-- Creates redirection docs and redirection worklist items."
-  Text 85, 155, 290, 10, "-- Prints DORD docs for collecting unreimbursed and unisured expenses."
+  Text 80, 45, 255, 10, "-- NEW 03/2016!! Calculates payments received during a specific date range."
+  Text 80, 60, 215, 10, "-- Searches CALI for a specific CP or NCP."
+  Text 40, 80, 335, 15, "-- Creates various documents related to Child Support intake, as well as DORD documents, and enters a note on CAAD."
+  Text 70, 105, 230, 10, "-- Calculates voluntary and involuntary amounts from the PALC screen."
+  Text 70, 125, 225, 10, "- Calculator for deteremining pro-rated support for partial months."
+  Text 75, 145, 290, 10, "-- Creates redirection docs and redirection worklist items."
+  Text 85, 165, 290, 10, "-- Prints DORD docs for collecting unreimbursed and unisured expenses."
 EndDialog
+
 
 
 'THE SCRIPT-----------------------------------------------------------------------------------------------
@@ -60,6 +63,7 @@ DO
 LOOP UNTIL ButtonPressed <> SIR_button
 
 IF ButtonPressed = ACTIONS_affidavit_of_service_button THEN CALL run_from_GitHub(script_repository & "ACTIONS/ACTIONS - AFFIDAVIT OF SERVICE BY MAIL DOCS.vbs")
+IF ButtonPressed = ACTIONS_ddpl_calc_button THEN CALL run_from_GitHub(script_repository & "ACTIONS/ACTIONS DDPL CALCULATOR.vbs")
 IF ButtonPressed = ACTIONS_find_name_on_cali_button THEN CALL run_from_GitHub(script_repository & "ACTIONS/ACTIONS - FIND NAME ON CALI.vbs")
 IF ButtonPressed = ACTIONS_prorate_support_button THEN call run_from_GitHub(script_repository & "ACTIONS/ACTIONS - PRORATE SUPPORT.vbs")
 IF ButtonPressed = ACTIONS_intake_button then call run_from_GitHub(script_repository & "ACTIONS/ACTIONS - INTAKE.vbs")
