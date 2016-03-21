@@ -116,4 +116,5 @@ DO
 LOOP UNTIL USWT_type <> "E4111"
 
 
-script_end_procedure("Success!  " & count & " cases purged!")
+script_end_procedure("Success!  " & count & " worklists purged!")
+
