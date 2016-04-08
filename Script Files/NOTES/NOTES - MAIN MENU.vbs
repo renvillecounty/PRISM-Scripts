@@ -49,26 +49,23 @@ BeginDialog NOTES_main_menu_dialog, 0, 0, 436, 300, "NOTES main menu dialog"
     PushButton 10, 255, 110, 10, "Waiver of Personal Service", NOTES_waiver_of_personal_service_button
     PushButton 350, 0, 80, 10, "PRISM Scripts in SIR", SIR_button
     CancelButton 380, 275, 50, 20
-  Text 90, 35, 300, 10, "-- NEW 2/2016 Creates a CAAD note for documenting an arrears management review."
+  Text 50, 20, 300, 10, "-- Creates a CAAD note for documenting adjustments made to the case."
+  Text 90, 35, 300, 10, "-- Creates a CAAD note for documenting an arrears management review."
+  Text 60, 50, 240, 10, "-- Creates a uniform CAAD note for when you have contact with a client."
   Text 90, 65, 330, 20, "-- Creates B0170 CAAD note for requesting a court order, which also creates a work list to remind the worker to check the status of the court order request."
   Text 60, 85, 350, 10, "-- Creates T0111 CAAD note script with text copied from the INTD screen."
   Text 100, 100, 200, 10, "-- Date of the hearing template for expro."
   Text 110, 115, 200, 10, "-- Date of the hearing template for judicial."
+  Text 80, 130, 280, 10, "-- Creates a CAAD note for recording receipt of intake docs."
+  Text 80, 145, 340, 10, "-- 04/2016!!! Creates CAAD and CAWT about IW."
+  Text 105, 160, 290, 10, "--  Creates a CAAD note for recording documents sent to the parties."
   Text 80, 175, 340, 10, "-- Creates CAAD note for documenting non-payment enforcement actions."
   Text 60, 190, 240, 10, "-- CAAD note for case noting ''pay or report'' instances."
   Text 80, 205, 230, 10, "-- CAAD note for quarterly review processes."
   Text 60, 220, 350, 10, "-- Creates CAAD note noting the dates parties signed recognition of parentage."
   Text 60, 235, 350, 20, "-- Creates CAAD note that the Service of Process invoice was received, details about the service, and if the invoice is OK to pay."
   Text 120, 255, 290, 10, "-- Creates CAAD note of the date a CP signed the waiver of personal service document."
-  Text 60, 50, 240, 10, "-- Creates a uniform CAAD note for when you have contact with a client."
-  Text 50, 20, 300, 10, "-- NEW 1/2016 Creates a CAAD note for documenting adjustments made to the case."
-  Text 105, 160, 290, 10, "--  Creates a CAAD note for recording documents sent to the parties."
-  Text 80, 130, 280, 10, "-- Creates a CAAD note for recording receipt of intake docs."
-  Text 80, 145, 340, 10, "-- 04/2016!!! Creates CAAD and CAWT about IW."
 EndDialog
-
-
-
 
 
 'THE SCRIPT-----------------------------------------------------------------------------------------------
@@ -95,5 +92,5 @@ IF ButtonPressed = NOTES_waiver_of_personal_service_button THEN CALL run_from_Gi
 IF ButtonPressed = NOTES_Arrears_mgmt_button THEN CALL run_from_GitHub (script_repository & "NOTES/NOTES - ARREARS MGMT REVIEW.vbs")
 IF ButtonPressed = NOTES_MES_Fin_docs_button THEN CALL run_from_GitHub (script_repository & "NOTES/NOTES - MES FINANCIAL DOCS SENT.vbs")
 IF ButtonPressed = NOTES_Intake_docs_button THEN CALL run_from_GitHub (script_repository & "NOTES/NOTES - INTAKE DOCS RECEIVED.vbs")
-
+IF ButtonPressed = NOTES_IW_caad_button 			THEN CALL run_from_GitHub(script_repository & "NOTES/NOTES - IW CAAD CAWT.vbs")
 
